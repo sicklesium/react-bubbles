@@ -27,9 +27,16 @@ In this project you will create a login page and request a token from the server
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
+      A token, given after the user provides correct login credentials typically, is used to access protected/private routes. It is placed in the header of any axios calls made during that user's session. 
 - [ ] What steps can you take in your web apps to keep your data secure?
+      One can create a login component that checks the user's credentials. It also creates a token once the user has been authenticated. Then, create protected routes that only a logged in user can access. The final step would be to create a log out component that erases the token from local storage once the user is finished. 
 - [ ] Describe how web servers work.
+      As a computer connected to the internet that processes incoming requests, a web server then returns data and/or files to the user's web browser. 
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+      C – post request to submit data to the API (create)
+      R – get request to fetch data from the API (read)
+      U – put request to update data on the API (update)
+      D – delete request to delete data from the API (destroy/delete)
 
 
 ## Project Set Up
