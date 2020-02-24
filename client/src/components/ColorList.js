@@ -115,7 +115,35 @@ const ColorList = ({ colors, updateColors }) => {
           </div>
         </form>
       )}
-
+      <button className="addBtn" onClick={() => setIsAdding(!isAdding)}>
+        Add New Color +
+      </button>
+      {isAdding && (
+        <>
+          <h2>Add new color name and hex code:</h2>
+          <form className="addForm" onSubmit={saveNewColor}>
+            <input
+              name="color"
+              placeholder="color name..."
+              value={newColor.color}
+              onChange={e =>
+                setNewColor({ ...newColor, color: e.target.value })
+              }
+            />
+            <input
+              name="hex"
+              placeholder="hex number..."
+              value={newColor.code.hex}
+              onChange={e =>
+                setNewColor({ ...newColor, code: { hex: e.target.value } })
+              }
+            />
+            <button type="submit" className="saveBtn">
+              Save
+            </button>
+          </form>
+        </>
+      )}
       <div className="spacer" />
       {/* stretch - build another form here to add a color */}
     </div>
